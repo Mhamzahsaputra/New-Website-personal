@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #13245e;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.menu {
+    margin-top: 1em;
+}
+
+.menu nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #45a049;
+    padding: 1em 0;
+    border-radius: 20px;
+}
+
+.menu nav ul li {
+    margin: 0 1em;
+}
+
+.menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu nav ul li a:hover {
+    background-color: #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu nav ul li a:active {
+    background-color: #2e6c31;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+main {
+    padding: 6em 2em 2em 2em; /* Adjusted padding to prevent content being hidden under the header */
+}
+
+section {
+    width: 95%;
+    margin: auto;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.content {
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.content p {
+    flex: 1;
+    padding: 0.5em 0;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scrollable-text {
+    overflow-y: visible; /* Removes scrolling */
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu nav ul li {
+        margin: 0.5em 0;
+    }
+
+    section {
+        padding: 1.5em;
+    }
+}

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #13245e;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.menu {
+    margin-top: 1em;
+}
+
+.menu nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #45a049;
+    padding: 1em 0;
+    border-radius: 20px;
+}
+
+.menu nav ul li {
+    margin: 0 1em;
+}
+
+.menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu nav ul li a:hover {
+    background-color: #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu nav ul li a:active {
+    background-color: #2e6c31;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+main {
+    padding: 6em 0 2em 0; /* Tambahkan padding atas agar tidak terpotong header */
+}
+
+section {
+    width: 95vw;
+    height: 100vh;
+    padding: 3em;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    scroll-margin-top: 8em; /* Tambahkan scroll-margin-top pada section */
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5em;
+}
+
+.content img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content p {
+    flex: 1;
+}
+
+.scrollable-text {
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.scrollable-text::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-text::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.scrollable-text::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animasi untuk gambar */
+.content img {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query untuk responsif */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu nav ul li {
+        margin: 0.5em 0;
+    }
+
+    section {
+        height: auto;
+        padding: 6em 2em;
+    }
+
+    .scrollable-text {
+        max-height: none;
+    }
+}
